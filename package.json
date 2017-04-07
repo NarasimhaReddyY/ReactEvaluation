@@ -41,6 +41,8 @@
     "webpack-dev-server": "1.14.1"
   },
   "dependencies": {
+    "axios": "^0.16.0",
+    "lodash": "^4.17.4",
     "react": "15.2.1",
     "react-dom": "15.2.1"
   }
