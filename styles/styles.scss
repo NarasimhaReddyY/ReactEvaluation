@@ -1,0 +1,36 @@
+header {
+  background: #3498db;
+  color: white;
+  border: 1px solid;
+  padding: 1em;
+  text-align: center;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+div {
+    display: block;
+}
+
+.news-body {
+  width: 100%;
+    overflow:auto;
+}
+
+.category-menu {
+    float:left; 
+    width: 20%;
+    height: 400px;
+}
+
+.resource-handler {
+    float: right;
+    height: 400px;
+    width: 80%;
+}

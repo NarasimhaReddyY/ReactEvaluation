@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
+import styles from '../styles/styles.scss';
 
 class Header extends Component {
 	render () {
 		return (
-			<div>
-				<h4>Welcome To Live News</h4>
-			</div>
+			<header><h3>Welcome To Live News</h3></header>
 		)
 	}
 }

@@ -8,9 +8,7 @@ class Category extends Component {
 
 		render() {
 			return (
-				<div>
-					<button type="button" value={this.props.value}>{_.upperCase(this.props.value)}</button>
-				</div>
+				<li value={this.props.name} onClick={this.props.handleOnClick}>{_.upperCase(this.props.name)}</li>
 			)
 		}
 }
