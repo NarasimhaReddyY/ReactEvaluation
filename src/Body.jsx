@@ -20,6 +20,7 @@ class Body extends Component {
 	componentDidMount() {
 		var categories = [];
 		var _this = this;
+
 		axios({
 		  method: 'get',
 		  url: 'https://newsapi.org/v1/sources',

@@ -8,14 +8,14 @@ class SelectBox extends Component {
 
 	render(){
 		var sources = this.props.sources;
-		var options = []; 
+		var options = [<option value="">Select a value</option>]; 
 
 		_.forEach(sources, (source) => { 
 			options.push(<option value={source}>{_.upperCase(source)}</option>)
 		});
 
 		return (
-			 <select>
+			 <select onChange={this.props.handleOnSelect}>
 			 {options}
 			</select> 
 		)
