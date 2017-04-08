@@ -20,7 +20,7 @@ div {
 
 .news-body {
   width: 100%;
-    overflow:auto;
+  overflow:auto;
 }
 
 .category-menu {
@@ -31,7 +31,6 @@ div {
 
 .resource-handler {
     float: right;
-    height: 400px;
     width: 80%;
 }
 
@@ -45,4 +44,18 @@ div {
   float: right;
   height: 300px;
   width: 80%; 
+}
+
+.article {
+  display: block;
+  padding: 10px;
+  border: 1px solid green;
+  height: 430px;
+  width: 30%;
+  float:left;
+}
+
+.article img {
+   width: 325px;
+   height: 200px;
 }

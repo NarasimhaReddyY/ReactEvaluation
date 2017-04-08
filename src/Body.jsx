@@ -25,6 +25,7 @@ class Body extends Component {
 		  method: 'get',
 		  url: 'https://newsapi.org/v1/sources',
 		  data: {
+		  	language: "en"
 		  }
 		})
 		.then(
