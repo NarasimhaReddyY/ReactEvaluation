@@ -13,21 +13,17 @@ class CategoryHandler extends Component {
 		var categories = this.props.categories;
 		var _this = this;
 
-		//used index as key, because react giving a warning. 
-		//see more info here https://facebook.github.io/react/docs/lists-and-keys.html#keys
 		_.forEach(categories, function(name, index){
-			categoryComponents.push(<Category key={index+1} 
+			categoryComponents.push(<Category key={index} 
 																				name={name}
 																				handleOnClick={_this.props.handleOnClick}/>
 															);
 		});
 
 		return (
-			<div>
-				<ul>
-					{categoryComponents}
-				</ul>
-			</div>
+			<ul>
+				{categoryComponents}
+			</ul>
 		)
 	}
 }

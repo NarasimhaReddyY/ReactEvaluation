@@ -15,7 +15,8 @@ class SelectBox extends Component {
 		});
 
 		return (
-			 <select onChange={this.props.handleOnSelect}>
+			 <select 
+			 onChange={this.props.handleOnSelect}>
 			 {options}
 			</select> 
 		)

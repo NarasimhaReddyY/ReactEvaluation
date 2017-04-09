@@ -59,3 +59,17 @@ div {
    width: 325px;
    height: 200px;
 }
+
+
+.category-menu ul li {
+  cursor: pointer; 
+  cursor: hand;
+}
+
+.category-menu ul li:hover {
+  background-color: #ddd;
+}
+
+.category-menu ul li.active {
+    background-color: #ccc;
+}

@@ -26,6 +26,7 @@ class ResourceHandler extends Component {
 	componentWillReceiveProps(nextProps) {
 		var _this = this;
 
+		//for same category no need to call API again.
 		if (!(this.props.category == nextProps.category)) {
 			axios.get("https://newsapi.org/v1/sources", 
 				{ params: 
@@ -47,6 +48,8 @@ class ResourceHandler extends Component {
 		}
 	}
 
+	//For same source no need to call API again.
+	//Check if source is blank, because if source is blank api will raise an error.
 	componentDidUpdate (prevProps, prevState) {
 		var _this = this;	
 
@@ -73,7 +76,9 @@ class ResourceHandler extends Component {
 				<p>Select Source</p>
 				{
 					(this.state.sources.length > 0) ? 
-					<SelectBox sources={this.state.sources} handleOnSelect={this.handleOnSelect}/> :
+					<SelectBox 
+					sources={this.state.sources}
+					handleOnSelect={this.handleOnSelect}/> :
 					<p>No valid source found</p>
 				}
 				</div>

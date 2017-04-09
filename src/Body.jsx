@@ -45,7 +45,15 @@ class Body extends Component {
 
 	//to set/get a non standard attribute on DOM, We can use set/getAttribute() method.
 	setCategory (event) {
-		this.setState({category: event.currentTarget.getAttribute('value')});
+		this.setState({
+			category: event.currentTarget.getAttribute('value')
+		});
+
+		_.forEach(event.target.parentNode.children, function(element) {
+				element.classList.remove("active");
+		});
+		
+		event.target.className = "active";
 	}
 
 	render() {
@@ -53,12 +61,15 @@ class Body extends Component {
 			<div className="news-body">
 				<div className="category-menu">
 					{ (this.state.categories.length > 0) ? 
-						<p><CategoryHandler categories={this.state.categories} handleOnClick={this.setCategory}/></p> : ""
+						<CategoryHandler 
+						categories={this.state.categories}
+						handleOnClick={this.setCategory}/> : ""
 					}
 				</div>
 				<div className="resource-handler">
 					{(this.state.categories.length > 0) ? 
-						<p><ResourceHandler category={this.state.category}/></p> :
+						<ResourceHandler 
+						category={this.state.category}/> :
 						<p>Wait!, Resources are loading!</p> 
 						}
 				</div>
