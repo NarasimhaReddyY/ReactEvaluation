@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Header from './Header.jsx';
-import Body from './Body.jsx';
+import BodyContainer from './containers/BodyContainer.jsx';
 import manageApp from './reducers/index.jsx';
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
     return (
     	<div>
       	<Header />
-      	<Body />
+      	<BodyContainer />
     	</div>
     );
   }

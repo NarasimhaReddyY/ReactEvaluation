@@ -14,10 +14,11 @@ class CategoryHandler extends Component {
 		var _this = this;
 
 		_.forEach(categories, function(name, index){
-			categoryComponents.push(<Category key={index} 
-																				name={name}
-																				handleOnClick={_this.props.handleOnClick}/>
-															);
+			categoryComponents.push(<Category 
+																key={index} 
+																name={name}
+																handleOnClick={_this.props.handleOnClick}
+															/>);
 		});
 
 		return (
