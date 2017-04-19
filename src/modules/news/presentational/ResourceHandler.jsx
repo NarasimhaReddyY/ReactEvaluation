@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import _ from 'lodash';
-import SelectBox from '../ResourceHandler/SelectBox.jsx';
+import SelectBox from '../../common/SelectBox.jsx';
 import ArticleHandler from './ArticleHandler.jsx'
 	
 class ResourceHandler extends Component {

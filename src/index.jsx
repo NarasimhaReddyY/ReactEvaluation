@@ -8,7 +8,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import App from './App.jsx';
+import App from './modules/news/presentational/App.jsx';
 import manageApp from './reducers/index.jsx'
 
 let store = createStore(manageApp);

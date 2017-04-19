@@ -1,7 +1,13 @@
 import { connect } from 'react-redux'
-import Body from '../components/Body.jsx'
-import ResourceHandler from '../components/ResourceHandler.jsx'
-import { setCategories, setCategory, setResources, setResource, setArticles } from '../actions/index.jsx'
+import Body from '../presentational/Body.jsx'
+import ResourceHandler from '../presentational/ResourceHandler.jsx'
+import { 
+  setCategories,
+  setCategory,
+  setResources,
+  setResource,
+  setArticles 
+} from '../../../actions/index.jsx'
 
 const mapStateToProps = (state) => {
   return {

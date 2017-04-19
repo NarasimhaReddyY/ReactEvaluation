@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Article from '../ArticleHandler/Article.jsx';
+import Article from './Article.jsx';
 import _ from 'lodash';
 
 class ArticleHandler extends Component {
