@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Category from '../CategoryHandler/Category.jsx';
+import Category from './Category.jsx';
 import _ from 'lodash';
 
 class CategoryHandler extends Component {
