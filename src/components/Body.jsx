@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import _ from 'lodash';
-import CategoryHandler from '../CategoryHandler.jsx';
-import ResourceHandler from '../ResourceHandler.jsx';
+import CategoryHandler from './CategoryHandler.jsx';
+import ResourceHandlerContainer from '../containers/ResourceHandlerContainer.jsx';
 
 class Body extends Component {
 
@@ -47,7 +47,7 @@ class Body extends Component {
 				</div>
 				<div className="resource-handler">
 					{(this.props.categories.length > 0) ? 
-						<ResourceHandler 
+						<ResourceHandlerContainer
 							category={this.props.category}
 						/> :
 						<p>Wait!, Resources are loading!</p> 
