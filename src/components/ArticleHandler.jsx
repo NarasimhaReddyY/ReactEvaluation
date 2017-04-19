@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Article from './ArticleHandler/Article.jsx';
+import Article from '../ArticleHandler/Article.jsx';
 import _ from 'lodash';
 
 class ArticleHandler extends Component {
@@ -12,7 +12,7 @@ class ArticleHandler extends Component {
 			var articles = this.props.articles;
 			var articleComponents = [];
 
-			_.forEach(articles, function(article){
+			_.forEach(articles, function(article, index){
 				articleComponents.push(<Article article={article}/>);
 			});
 
