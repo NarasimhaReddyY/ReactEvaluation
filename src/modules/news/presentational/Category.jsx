@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 
 export default function Category ({ name, handleOnClick }) {
 	return (
@@ -10,4 +11,9 @@ export default function Category ({ name, handleOnClick }) {
 		</li>
 
 	)	
+}
+
+Category.propTypes = {
+	name: PropTypes.string.isRequired,
+	handleOnClick: PropTypes.func.isRequired
 }

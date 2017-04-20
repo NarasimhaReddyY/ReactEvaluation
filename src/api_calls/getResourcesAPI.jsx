@@ -4,7 +4,7 @@ import { setResources } from '../actions/index.jsx';
 
 export default function getResourcesAPI (category) {
 	return function(dispatch) {	
-		axios.get("https://newsapi.org/v1/sources", 
+		axios.get('https://newsapi.org/v1/sources', 
 			{ params: 
 				{ category: category }
 			}

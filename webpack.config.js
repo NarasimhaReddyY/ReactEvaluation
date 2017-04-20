@@ -1,5 +1,5 @@
 var path = require('path');
-var webpack = require('webpack');
+// var webpack = require('webpack');
 
 module.exports = {
   devtool: 'eval',
@@ -21,7 +21,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ["style", "css", "sass"]
+        loaders: ['style', 'css', 'sass']
       }
     ]
   }

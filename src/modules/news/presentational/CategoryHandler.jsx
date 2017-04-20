@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Category from './Category.jsx';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 export default function CategoryHandler({ categories, handleOnClick}) {
@@ -20,4 +21,9 @@ export default function CategoryHandler({ categories, handleOnClick}) {
 			{categoryComponents}
 		</ul>
 	)
+}
+
+CategoryHandler.propTypes = {
+	categories: PropTypes.array.isRequired,
+	handleOnClick: PropTypes.func.isRequired
 }

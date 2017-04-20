@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Article({article}) {
 	return (
@@ -8,4 +9,8 @@ export default function Article({article}) {
 			<p>{article.description.slice(0, 150)}</p>
 		</div>
 	)
+}
+
+Article.propTypes = {
+	article: PropTypes.object.isRequired
 }

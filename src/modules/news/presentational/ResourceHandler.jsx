@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import axios from 'axios';
 import _ from 'lodash';
 import SelectBox from '../../common/SelectBox.jsx';
 import ArticleHandler from './ArticleHandler.jsx';
+import PropTypes from 'prop-types';
 
 class ResourceHandler extends Component {
 	constructor (props) {
@@ -18,7 +18,7 @@ class ResourceHandler extends Component {
 		}
 	}
 
-	componentDidUpdate (prevProps, prevState) {
+	componentDidUpdate (prevProps) {
 		var _this = this;
 		
 		//For same source no need to call API again.
@@ -48,7 +48,7 @@ class ResourceHandler extends Component {
 					{ 
 						(
 							this.props.articles.length > 0 ? 
-							<ArticleHandler articles={this.props.articles}/> : ""
+							<ArticleHandler articles={this.props.articles}/> : ''
 						)
 					}
 				</div>
@@ -56,5 +56,20 @@ class ResourceHandler extends Component {
 		)
 	}
 }
+
+ResourceHandler.propTypes = {
+	categories: PropTypes.array,
+	category: PropTypes.string.isRequired,
+	resources: PropTypes.array,
+  resource: PropTypes.string,
+  articles: PropTypes.array,
+
+  setCategories: PropTypes.func,
+  setCategory: PropTypes.func,
+  setResources: PropTypes.func,
+  setResource: PropTypes.func,
+  setArticles: PropTypes.func
+}
+
 
 export default ResourceHandler;

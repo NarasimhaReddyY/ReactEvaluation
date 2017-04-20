@@ -32,8 +32,11 @@
     "babel-preset-react": "6.11.1",
     "babel-preset-stage-0": "6.5.0",
     "css-loader": "0.23.1",
-    "eslint": "2.7.0",
-    "eslint-plugin-react": "5.2.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
     "node-sass": "3.8.0",
     "sass-loader": "4.0.0",
     "style-loader": "0.13.1",
@@ -46,6 +49,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
+    "react-spinkit": "^2.1.1",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0"
   }
