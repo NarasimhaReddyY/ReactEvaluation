@@ -35,17 +35,21 @@ class ResourceHandler extends Component {
 				<div className="select-box">
 				<p>Select Source</p>
 				{
-					(this.props.resources.length > 0) ? 
-					<SelectBox 
-					sources={this.props.resources}
-					handleOnSelect={this.props.setResource}/> :
-					<p>No valid source found</p>
+					(
+						(this.props.resources.length > 0) ? 
+						<SelectBox 
+						sources={this.props.resources}
+						handleOnSelect={this.props.setResource}/> :
+						<p>No valid source found</p>
+					)
 				}
 				</div>
 				<div className="article-handler">
-					{ this.props.articles.length > 0 ? 
-						<ArticleHandler articles={this.props.articles}/> :
-						""
+					{ 
+						(
+							this.props.articles.length > 0 ? 
+							<ArticleHandler articles={this.props.articles}/> : ""
+						)
 					}
 				</div>
 			</div>
