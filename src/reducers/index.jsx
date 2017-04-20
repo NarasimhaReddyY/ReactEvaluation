@@ -11,7 +11,7 @@ export default function manageApp(state = initialState, action) {
 		case 'SET_CATEGORIES':
 			return Object.assign({}, state, { categories: action.categories })
 		case 'SET_CATEGORY':
-			return Object.assign({}, state, { category: action.category }, { articles: []})
+			return Object.assign({}, state, { category: action.category }, { articles: []}, { resource: ''})
 		case 'SET_RESOURCES':
 			return Object.assign({}, state, { resources: action.resources })
 		case 'SET_RESOURCE':

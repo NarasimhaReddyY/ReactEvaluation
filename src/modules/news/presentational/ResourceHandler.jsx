@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import _ from 'lodash';
 import SelectBox from '../../common/SelectBox.jsx';
-import ArticleHandler from './ArticleHandler.jsx'
-	
+import ArticleHandler from './ArticleHandler.jsx';
+
 class ResourceHandler extends Component {
 	constructor (props) {
 		super(props);
@@ -14,39 +14,17 @@ class ResourceHandler extends Component {
 
 		//for same category no need to call API again.
 		if (!(this.props.category == nextProps.category)) {
-			axios.get("https://newsapi.org/v1/sources", 
-				{ params: 
-					{ category: nextProps.category }
-				}
-			)
-			.then(
-				function(response) {
-					var sources = [];
-					_.forEach(response.data.sources, function(object){
-						sources.push(object.id)
-					});
-
-					_this.props.setResources(sources);
-				}
-			);
+			_this.props.setResources(nextProps.category);
 		}
 	}
 
-	//For same source no need to call API again.
-	//Check if source is blank, because if source is blank api will raise an error.
 	componentDidUpdate (prevProps, prevState) {
 		var _this = this;
 		
+		//For same source no need to call API again.
+		//Check if source is blank, because if source is blank api will raise an error.
 		if ((!_.isEmpty(this.props.resource)) && !(this.props.resource == prevProps.resource)) {
-			axios.get("https://newsapi.org/v1/articles", {
-				params: {
-					source: this.props.resource,
-					apiKey: "91a53883772d44bf8ee89d81249d4ac7"
-				}
-			})
-			.then(function(response){
-				_this.props.setArticles(response.data.articles);
-			});
+			_this.props.setArticles(_this.props.resource);
 		}
 	}
 

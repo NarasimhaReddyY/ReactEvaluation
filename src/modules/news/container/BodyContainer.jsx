@@ -1,6 +1,10 @@
 import { connect } from 'react-redux'
 import Body from '../presentational/Body.jsx'
 import ResourceHandler from '../presentational/ResourceHandler.jsx'
+import getCategoriesAPI from '../../../api_calls/getCategoriesAPI.jsx';
+import getResourcesAPI from '../../../api_calls/getResourcesAPI.jsx';
+import getArticlesAPI from '../../../api_calls/getArticlesAPI.jsx';
+
 import { 
   setCategories,
   setCategory,
@@ -20,7 +24,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {
+  return {  
     //TODO: Refactor this code.
     setCategory: (event) => {
       dispatch(setCategory(event.currentTarget.getAttribute('value')))
@@ -32,17 +36,17 @@ const mapDispatchToProps = (dispatch) => {
       event.target.className = "active";
     },
 
-    setCategories: (categories) => {
-      dispatch(setCategories(categories));
+    setCategories: () => {
+      dispatch(getCategoriesAPI());
     },
     setResource: (event) => {
       dispatch(setResource(event.target.value))
     },
-    setResources: (resources) => {
-      dispatch(setResources(resources))
+    setResources: (category) => {
+      dispatch(getResourcesAPI(category));
     },
-    setArticles: (articles) => {
-      dispatch(setArticles(articles))
+    setArticles: (resource) => {
+      dispatch(getArticlesAPI(resource));
     }
   }
 }
