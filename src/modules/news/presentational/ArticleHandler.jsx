@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Article from './Article.jsx';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 export default function ArticleHandler ({articles}) {
@@ -15,4 +16,9 @@ export default function ArticleHandler ({articles}) {
 			{articleComponents}
 		</div>	
 	)
+}
+
+
+ArticleHandler.propTypes = {
+	articles: PropTypes.array.isRequired
 }

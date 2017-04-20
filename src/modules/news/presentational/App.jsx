@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import BodyContainer from '../container/BodyContainer.jsx';
 import Header from './Header.jsx';
 

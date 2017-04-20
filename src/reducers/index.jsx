@@ -1,8 +1,8 @@
 const initialState = {
 	categories: [],
-	category: "",
+	category: '',
 	resources: [],
-	resource: "",
+	resource: '',
 	articles: []
 }
 

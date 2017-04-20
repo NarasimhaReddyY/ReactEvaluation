@@ -7,11 +7,11 @@ export default function getCategoriesAPI () {
 		var categories = [];
 
 		axios({
-		  method: 'get',
-		  url: 'https://newsapi.org/v1/sources',
-		  data: {
-		  	language: "en"
-		  }
+			method: 'get',
+			url: 'https://newsapi.org/v1/sources',
+			data: {
+				language: 'en'
+			}
 		})
 		.then(
 			function(response) {
@@ -20,7 +20,7 @@ export default function getCategoriesAPI () {
 				_.forEach(uniqList, function(object){
 					categories.push(object.category)
 				});
-				
+
 				dispatch(setCategories(categories));
 			}
 		);

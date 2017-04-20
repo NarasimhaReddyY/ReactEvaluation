@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 
 export default function SelectBox({sources, handleOnSelect}) {
 	var options = [<option key={0} value="">Select a value</option>]; 
@@ -9,8 +10,13 @@ export default function SelectBox({sources, handleOnSelect}) {
 
 	return (
 		<select 
-		 onChange={handleOnSelect}>
-		 {options}
+			onChange={handleOnSelect}>
+			{options}
 		</select> 	
 	)
+}
+
+SelectBox.propTypes = {
+	sources: PropTypes.array,
+	handleOnSelect: PropTypes.func
 }

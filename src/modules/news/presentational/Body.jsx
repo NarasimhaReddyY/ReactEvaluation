@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
-import _ from 'lodash';
 import CategoryHandler from './CategoryHandler.jsx';
 import ResourceHandler from './ResourceHandler.jsx';
 
@@ -25,14 +23,19 @@ class Body extends Component {
 						<CategoryHandler 
 							categories={this.props.categories}
 							handleOnClick={this.props.setCategory}
-						/> : ""
+						/> : ''
 					}
 				</div>
 				<div className="resource-handler">
 					{( category_length 	> 0) ? 
 						<ResourceHandler
 							category={this.props.category}
-							{...this.props}
+							resource={this.props.resource}
+							resources={this.props.resources}
+							articles={this.props.articles}
+							setResource={this.props.setResource}
+							setResources={this.props.setResources}
+							setArticles={this.props.setArticles}
 						/> :
 						<p>Wait!, Resources are loading!</p> 
 						}

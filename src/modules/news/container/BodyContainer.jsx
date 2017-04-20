@@ -1,16 +1,13 @@
 import { connect } from 'react-redux';
 import Body from '../presentational/Body.jsx';
-import ResourceHandler from '../presentational/ResourceHandler.jsx'
+import _ from 'lodash';
 import getCategoriesAPI from '../../../api_calls/getCategoriesAPI.jsx';
 import getResourcesAPI from '../../../api_calls/getResourcesAPI.jsx';
 import getArticlesAPI from '../../../api_calls/getArticlesAPI.jsx';
 
 import { 
-  setCategories,
   setCategory,
-  setResources,
   setResource,
-  setArticles 
 } from '../../../actions/index.jsx';
 
 const mapStateToProps = (state) => {
@@ -32,10 +29,10 @@ const mapDispatchToProps = (dispatch) => {
       //TODO: Refactor this code.
       //This part will remove while adding better CSS.
       _.forEach(event.target.parentNode.children, function(element) {
-          element.classList.remove("active");
+          element.classList.remove('active');
       });
       
-      event.target.className = "active";
+      event.target.className = 'active';
     },
 
     setCategories: () => {
