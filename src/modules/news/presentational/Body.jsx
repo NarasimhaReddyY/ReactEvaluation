@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import _ from 'lodash';
 import CategoryHandler from './CategoryHandler.jsx';
@@ -15,10 +16,12 @@ class Body extends Component {
 	}
 
 	render() {
+		var category_length = this.props.categories.length;
+
 		return(
 			<div className="news-body">
 				<div className="category-menu">
-					{ (this.props.categories.length > 0) ? 
+					{ ( category_length > 0) ? 
 						<CategoryHandler 
 							categories={this.props.categories}
 							handleOnClick={this.props.setCategory}
@@ -26,7 +29,7 @@ class Body extends Component {
 					}
 				</div>
 				<div className="resource-handler">
-					{(this.props.categories.length > 0) ? 
+					{( category_length 	> 0) ? 
 						<ResourceHandler
 							category={this.props.category}
 							{...this.props}
@@ -38,5 +41,20 @@ class Body extends Component {
 		)
 	}
 }
+
+Body.propTypes = {
+  categories: PropTypes.array,
+  category: PropTypes.string,
+  resources: PropTypes.array,
+  resource: PropTypes.string,
+  articles: PropTypes.array,
+
+  setCategories: PropTypes.func,
+  setCategory: PropTypes.func,
+  setResources: PropTypes.func,
+  setResource: PropTypes.func,
+  setArticles: PropTypes.func
+}
+
 
 export default Body;

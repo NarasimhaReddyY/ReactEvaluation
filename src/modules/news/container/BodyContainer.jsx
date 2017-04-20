@@ -1,5 +1,5 @@
-import { connect } from 'react-redux'
-import Body from '../presentational/Body.jsx'
+import { connect } from 'react-redux';
+import Body from '../presentational/Body.jsx';
 import ResourceHandler from '../presentational/ResourceHandler.jsx'
 import getCategoriesAPI from '../../../api_calls/getCategoriesAPI.jsx';
 import getResourcesAPI from '../../../api_calls/getResourcesAPI.jsx';
@@ -11,7 +11,7 @@ import {
   setResources,
   setResource,
   setArticles 
-} from '../../../actions/index.jsx'
+} from '../../../actions/index.jsx';
 
 const mapStateToProps = (state) => {
   return {

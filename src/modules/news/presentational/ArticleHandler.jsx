@@ -6,7 +6,7 @@ export default function ArticleHandler ({articles}) {
 
 	var articleComponents = _.map(articles,
 		function(article, index){
-			return (<Article article={article}/>);
+			return (<Article key={index} article={article}/>);
 		}
 	);
 
