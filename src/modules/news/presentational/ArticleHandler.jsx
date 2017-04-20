@@ -2,26 +2,16 @@ import React, {Component} from 'react';
 import Article from './Article.jsx';
 import _ from 'lodash';
 
-class ArticleHandler extends Component {
+export default function ArticleHandler ({articles}) {
+	var articleComponents = [];
 
-	constructor (props) {
-		super(props);
-	}
+	_.forEach(articles, function(article, index){
+		articleComponents.push(<Article article={article}/>);
+	});
 
-	render() {
-			var articles = this.props.articles;
-			var articleComponents = [];
-
-			_.forEach(articles, function(article, index){
-				articleComponents.push(<Article article={article}/>);
-			});
-
-		return (
-			<div>
-				{articleComponents}
-			</div>
-		)
-	}
+	return (
+		<div>
+			{articleComponents}
+		</div>	
+	)
 }
-
-export default ArticleHandler;
