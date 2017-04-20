@@ -5,8 +5,7 @@ export default function Category ({ name, handleOnClick }) {
 	return (
 		<li 
 			value={name}
-			onClick={handleOnClick}
-		>
+			onClick={handleOnClick} >
 			{_.upperCase(name)}
 		</li>
 
