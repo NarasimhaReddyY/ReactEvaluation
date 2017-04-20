@@ -3,11 +3,12 @@ import Article from './Article.jsx';
 import _ from 'lodash';
 
 export default function ArticleHandler ({articles}) {
-	var articleComponents = [];
 
-	_.forEach(articles, function(article, index){
-		articleComponents.push(<Article article={article}/>);
-	});
+	var articleComponents = _.map(articles,
+		function(article, index){
+			return (<Article article={article}/>);
+		}
+	);
 
 	return (
 		<div>

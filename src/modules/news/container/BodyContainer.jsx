@@ -25,10 +25,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {  
-    //TODO: Refactor this code.
+    
     setCategory: (event) => {
       dispatch(setCategory(event.currentTarget.getAttribute('value')))
 
+      //TODO: Refactor this code.
+      //This part will remove while adding better CSS.
       _.forEach(event.target.parentNode.children, function(element) {
           element.classList.remove("active");
       });
