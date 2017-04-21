@@ -1,19 +1,30 @@
 import React from 'react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
+import Formsy from 'formsy-react';
+import { Select } from 'formsy-react-components';
 
 export default function SelectBox({ sources, handleOnSelect }) {
-  const options = [<option key={0} value="">Select a value</option>];
-  _.forEach(sources, (source, index) => {
-    options.push(<option key={index + 1} value={source}>{_.upperCase(source)}</option>);
+  const options = [{ value: '', label: 'Please Select' }];
+
+  _.forEach(sources, (source) => {
+    options.push({
+      value: source,
+      label: _.upperCase(source),
+    });
   });
 
   return (
-    <select
+    <Formsy.Form
       onChange={handleOnSelect}
     >
-      {options}
-    </select>
+      <Select
+        name="source"
+        label="Select a source"
+        options={options}
+        required
+      />
+    </Formsy.Form>
   );
 }
 

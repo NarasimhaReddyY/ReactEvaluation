@@ -20,7 +20,8 @@ class ResourceHandler extends Component {
 
     // For same source no need to call API again.
     // Check if source is blank, because if source is blank api will raise an error.
-    if ((!_.isEmpty(this.props.resource)) && !(this.props.resource === prevProps.resource)) {
+    if ((!_.isEmpty(this.props.resource)) &&
+        !(this.props.resource === prevProps.resource)) {
       scopeThis.props.setArticles(scopeThis.props.resource);
     }
   }
@@ -29,7 +30,6 @@ class ResourceHandler extends Component {
     return (
       <div>
         <div className="select-box">
-          <p>Select Source</p>
           {
           (
             (this.props.resources.length > 0) ?
