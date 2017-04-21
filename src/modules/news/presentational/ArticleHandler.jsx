@@ -1,24 +1,20 @@
 import React from 'react';
-import Article from './Article.jsx';
-import PropTypes from 'prop-types';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import Article from './Article.jsx';
 
-export default function ArticleHandler ({articles}) {
+export default function ArticleHandler({ articles }) {
+  const articleComponents = _.map(articles, (article, index) => {
+    return (<Article key={index} article={article} />);
+  });
 
-	var articleComponents = _.map(articles,
-		function(article, index){
-			return (<Article key={index} article={article}/>);
-		}
-	);
-
-	return (
-		<div>
-			{articleComponents}
-		</div>	
-	)
+  return (
+    <div>
+      {articleComponents}
+    </div>
+  );
 }
-
 
 ArticleHandler.propTypes = {
-	articles: PropTypes.array.isRequired
-}
+  articles: PropTypes.array.isRequired,
+};

@@ -1,34 +1,24 @@
-export const setCategory = (category) => {
-	return {
-		type: 'SET_CATEGORY',
-		category
-	}
-}
+export const setCategory = category => ({
+  type: 'SET_CATEGORY',
+  category,
+});
 
-export const setCategories = (categories) => {
-	return {
-		type: 'SET_CATEGORIES',
-		categories
-	}
-}
+export const setCategories = categories => ({
+  type: 'SET_CATEGORIES',
+  categories,
+});
 
-export const setResource = (resource) => {
-	return {
-		type: 'SET_RESOURCE',
-		resource
-	}
-}
+export const setResource = resource => ({
+  type: 'SET_RESOURCE',
+  resource,
+});
 
-export const setResources = (resources) => {
-	return {
-		type: 'SET_RESOURCES',
-		resources
-	}
-}
+export const setResources = resources => ({
+  type: 'SET_RESOURCES',
+  resources,
+});
 
-export const setArticles = (articles) => {
-	return {
-		type: 'SET_ARTICLES',
-		articles
-	}
-}
+export const setArticles = articles => ({
+  type: 'SET_ARTICLES',
+  articles,
+});

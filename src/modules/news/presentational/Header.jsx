@@ -1,11 +1,9 @@
 import React from 'react';
-import styles from '../../../../styles/styles.scss';
 
 const Header = () => (
-	<header>
-		<h3>Welcome To Live News</h3>
-	</header>
-)
+  <header>
+    <h3>Welcome To Live News</h3>
+  </header>
+);
 
-
-export default Header
+export default Header;
