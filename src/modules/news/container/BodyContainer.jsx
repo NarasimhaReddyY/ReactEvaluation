@@ -34,8 +34,8 @@ const mapDispatchToProps = dispatch => ({
   setCategories: () => {
     dispatch(getCategoriesAPI());
   },
-  setResource: (event) => {
-    dispatch(setResource(event.target.value));
+  setResource: (data) => {
+    dispatch(setResource(data.source));
   },
   setResources: (category) => {
     dispatch(getResourcesAPI(category));
